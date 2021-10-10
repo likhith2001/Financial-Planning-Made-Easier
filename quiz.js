@@ -22,7 +22,7 @@ let questions = [
     }, {
         question: "Why do people say they can't afford something when they actually do have enough money to pay for it?",
         choiceA: "They are lying.",
-        choiceB: "They are using their budget to make sure they meet their needs and work toward big goals.",
+        choiceB: "They are using their budget to meet their needs.",
         choiceC: "They don't know how to use a budget.",
         correct: "B"
     }, {
