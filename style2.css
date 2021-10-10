@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+/* 3 col fluid layout CSS Document */
+/* mac hide\\*/
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* end hide*/
+body {
+    background: #fff;
+    color: #000;
+}
+
+#outer {
+    margin: 0 20%;
+    background: #fff;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    color: #000000;
+    position: relative;
+    min-height: 100%;
+    z-index: 2;
+}
+
+* html #outer {
+    height: 100%;
+}
+
+/*IE treats height as min-height anyway*/
+#inner {
+    width: 100%;
+    /*needed to fix ies bad handling of widths with percentages*/
+}
+
+#header {
+    background: url(images/ukheader.gif) left no-repeat;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    color: #000000;
+    margin-left: -34%;
+    margin-right: -33.6%;
+    position: relative;
+    min-height: 150px;
+}
+
+* html #header {
+    height: 1px;
+}
+
+#left {
+    position: relative;
+    /*ie needs this to show float */
+    width: 32.5%;
+    float: left;
+    margin-left: -32.5%;
+    /*must be same as width */
+}
+
+#right {
+    position: relative;
+    /*ie needs this to show float */
+    width: 32%;
+    float: right;
+    margin-right: -32%;
+    /*must be same as width */
+    margin-left: 1px;
+}
+
+#footer {
+    width: 100%;
+    clear: both;
+    height: 50px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    background-color: #406700;
+    color: #ffffff;
+    text-align: center;
+    margin-top: -52px;
+    /* drag footer back into page*/
+    position: relative;
+    z-index: 3;
+}
+
+* html #footer {
+    /*only ie gets this style*/
+    height: 52px;
+    /* for ie5 */
+    /* height: 50px; */
+    /* for ie6 */
+}
+
+#clearfooter {
+    clear: both;
+    height: 52px;
+}
+
+/*needed to make room for footer*/
+h1,
+p {
+    margin: 0 0 .5em;
+    padding: 0 10px;
+}
+
+/* mac hide\\*/
+* html #centrecontent {
+    height: 1%;
+}
+
+/* combat IE's 3 pixel jog */
+/* end hide*/
+
+/* safari and opera initial 100% height fix */
+html > body #minHeight {
+    float: left;
+    width: 0px;
+    height: 100%;
+    margin-bottom: -52px;
+}
+
+@keyframes showTopText {
+    0% {
+        transform: translate3d(0, 100%, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(0, 50%, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes showBottomText {
+    0% {
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.animated-title {
+    color: #222;
+    font-family: Roboto, Arial, sans-serif;
+    height: 90vmin;
+    left: 50%;
+    position: absolute;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    width: 90vmin;
+}
+
+.animated-title > div {
+    height: 50%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+.animated-title > div div {
+    font-size: 12vmin;
+    padding: 2vmin 0;
+    position: absolute;
+}
+
+.animated-title > div div span {
+    display: block;
+}
+
+.animated-title > div.text-top {
+    border-bottom: 1vmin solid #000;
+    top: 0px;
+
+}
+
+.animated-title > div.text-top div {
+    animation: showTopText 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    bottom: 0;
+    transform: translate(0, 100%);
+}
+
+.animated-title > div.text-top div span:first-child {
+    color: brown;
+}
+
+.animated-title > div.text-bottom {
+    bottom: 0;
+}
+
+.animated-title > div.text-bottom div {
+    animation: showBottomText 0.5s;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+    top: 0;
+    transform: translate(0, -100%);
+}
+
+.easy-peasy {
+    color: goldenrod;
+    position: relative;
+    bottom: 138px;
+    left: 250px;
+}
+
+.context {
+    background-color: transparent;
+    width: 800px;
+    margin: auto;
+    border: 10px solid black;
+    padding: 50px;
+    text-align: justify;
+
+}
+
+.division {
+    padding-top: 700px;
+    text-align: center;
+}
+
+.wrapper {
+    height: 25vh;
+    /*This part is important for centering*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 40px;
+    overflow: hidden;
+}
+
+.typing-demo {
+    width: 44ch;
+    color: firebrick;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+}
+
+.matter{
+    float: left;
+    width: 55%;
+}
+
+.picorvideo{
+    float: right;
+    width: 40%;
+}
+
+.navbuttons {
+    height:100px;
+    position: relative;
+    border: 3px;
+  }
+  
+  .vertical-center {
+    margin-left: 600px;
+    position: absolute;
+    top: 30%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+#section03 {
+    background: cover no-repeat;
+}
+
+.demo a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #000;
+    font: normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+}
+
+#section03 a {
+    padding-top: 60px;
+}
+
+#section03 a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 46px;
+    height: 46px;
+    margin-left: -23px;
+    border: 1px solid #000;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+
+#section03 a span::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    width: 16px;
+    height: 16px;
+    margin: -12px 0 0 -8px;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+}
+
+#section03 a span::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .1);
+    border-radius: 100%;
+    opacity: 0;
+    -webkit-animation: sdb03 3s infinite;
+    animation: sdb03 3s infinite;
+    box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb03 {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    60% {
+        box-shadow: 0 0 0 60px rgba(255, 255, 255, .1);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes sdb03 {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    60% {
+        box-shadow: 0 0 0 60px rgba(255, 255, 255, .1);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.demo a:hover {
+    opacity: .5;
+}
+
+.typing-demo1 {
+    width: 40ch;
+    color: brown;
+    animation: typing 4s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+}
+
+
+
+.context1 {
+    background-color: transparent;
+    width: 400px;
+    height: 400px;
+    align-items: flex-end;
+    border: 10px solid black;
+    padding: 50px;
+    position: relative;
+    left: 40px;
+    text-align: justify;
+
+}
+
+.context2 {
+    background-color: transparent;
+    width: 400px;
+    height: 400px;
+    align-items: flex-end;
+    border: 10px solid black;
+    padding: 50px;
+    position: relative;
+    left: 40px;
+    top: 20px;
+    text-align: justify;
+
+}
+
+.context2 {
+    background-color: transparent;
+    width: 400px;
+    height: 400px;
+    align-items: flex-end;
+    border: 10px solid black;
+    padding: 50px;
+    position: relative;
+    left: 40px;
+    top: 20px;
+    text-align: justify;
+
+}
+
+.context3 {
+    background-color: transparent;
+    width: 400px;
+    height: 400px;
+    align-items: flex-end;
+    border: 10px solid black;
+    padding: 50px;
+    position: relative;
+    left: 600px;
+    bottom: 800px;
+    text-align: justify;
+}
+
+.context4 {
+    background-color: transparent;
+    width: 400px;
+    height: 400px;
+    align-items: flex-end;
+    border: 10px solid black;
+    padding: 50px;
+    position: relative;
+    left: 1130px;
+    top: -1200px;
+
+    text-align: justify;
+
+}
+
+.context5 {
+    background-color: transparent;
+    width: 400px;
+    height: 400px;
+    align-items: flex-end;
+    border: 10px solid black;
+    padding: 50px;
+    position: relative;
+    left: 1130px;
+
+    bottom: 20px;
+
+    text-align: justify;
+
+}
+
+.context6 {
+    background-color: #f5c64e;
+    width: 400px;
+    height: 400px;
+
+    border: 10px solid black;
+    padding: 50px;
+    position: relative;
+    left: 1130px;
+    top: -1580px;
+
+
+    text-align: justify;
+
+}
+
+/*--------Footer-------*/
+#footer {
+    background: #333;
+    color: #fff;
+    padding: 12px;
+    position: relative;
+    top: -500px;
+    bottom: 0
+}
+
+.fa-heart-o {
+    margin: 3px;
+    color: red;
+}
+
+.division1 {
+    text-align: center;
+}
