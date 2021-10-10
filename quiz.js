@@ -14,25 +14,22 @@ const scoreDiv = document.getElementById("scoreContainer");
 // create our questions
 let questions = [
     {
-        question: "What does HTML stand for?",
-        imgSrc: "html.png",
-        choiceA: "Correct",
-        choiceB: "Wrong",
-        choiceC: "Wrong",
+        question: "Which expense should go into a budget first?",
+        choiceA: "Food",
+        choiceB: "TV",
+        choiceC: "Books",
         correct: "A"
     }, {
-        question: "What does CSS stand for?",
-        imgSrc: "css.png",
-        choiceA: "Wrong",
-        choiceB: "Correct",
-        choiceC: "Wrong",
+        question: "Why do people say they can't afford something when they actually do have enough money to pay for it?",
+        choiceA: "They are lying.",
+        choiceB: "They are using their budget to make sure they meet their needs and work toward big goals.",
+        choiceC: "They don't know how to use a budget.",
         correct: "B"
     }, {
-        question: "What does JS stand for?",
-        imgSrc: "js.png",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
+        question: "What goes into a budget?",
+        choiceA: "Money earned and money spent",
+        choiceB: "The prices of the things you want",
+        choiceC: "The amount of money you have saved",
         correct: "C"
     }
 ];
